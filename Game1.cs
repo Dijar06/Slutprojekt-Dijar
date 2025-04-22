@@ -1,4 +1,5 @@
-﻿using Microsoft.Xna.Framework;
+﻿using System.Collections.Generic;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 
@@ -7,11 +8,11 @@ namespace Slutprojekt_Dijar;
 public class Game1 : Game
 {
 
-    Texture2D texture;
-    Vector2 position;
+    public Texture2D texture;
+    public Vector2 position;
     private GraphicsDeviceManager _graphics;
     private SpriteBatch _spriteBatch;
-
+    private List<BaseClass> objects;
     public Game1()
     {
         _graphics = new GraphicsDeviceManager(this);
@@ -31,7 +32,10 @@ public class Game1 : Game
         _spriteBatch = new SpriteBatch(GraphicsDevice);
 
         texture = Content.Load<Texture2D>("car");
-        position = new Vector2(0,0);
+        
+        objects = new List<BaseClass>();
+        Player player = new Player(texture);
+        objects.Add(player);
     }
 
     protected override void Update(GameTime gameTime)
@@ -39,19 +43,9 @@ public class Game1 : Game
         if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
             Exit();
 
-        if (Keyboard.GetState().IsKeyDown(Keys.W)){
-            position.Y -= 3;
+        foreach (var obj in objects){
+            obj.Update(gameTime, objects);
         }
-        if (Keyboard.GetState().IsKeyDown(Keys.S)){
-            position.Y += 3;
-        }
-        if (Keyboard.GetState().IsKeyDown(Keys.A)){
-            position.X -= 3;
-        }
-        if (Keyboard.GetState().IsKeyDown(Keys.D)){
-            position.X += 3;
-        }
-
 
         base.Update(gameTime);
     }
@@ -61,7 +55,9 @@ public class Game1 : Game
         GraphicsDevice.Clear(Color.LightGray);
 
         _spriteBatch.Begin();
-        _spriteBatch.Draw(texture, position, Color.White);
+        foreach (var obj in objects){
+            obj.Draw(_spriteBatch);
+        }
         _spriteBatch.End();
 
         base.Draw(gameTime);
