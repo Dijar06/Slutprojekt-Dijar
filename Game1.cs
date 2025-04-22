@@ -7,17 +7,29 @@ namespace Slutprojekt_Dijar;
 
 public class Game1 : Game
 {
-
-    public Texture2D texture;
-    public Vector2 position;
     private GraphicsDeviceManager _graphics;
     private SpriteBatch _spriteBatch;
+
     private List<BaseClass> objects;
+
+    public static int ScreenWidth = 1280;
+    public static int ScreenHeight = 720;
+
+    private bool hasStarted = false;
+
     public Game1()
     {
         _graphics = new GraphicsDeviceManager(this);
         Content.RootDirectory = "Content";
         IsMouseVisible = true;
+
+        this.Window.AllowUserResizing = false;
+        this.Window.Title = "Racing!";
+
+        ScreenWidth = graphics.PreferredBackBufferWidth;
+        ScreenHeight = graphics.PrefferedBackBufferHeight;
+        graphics.IsFullScreen = false;
+        graphics.ApplyChanges();
     }
 
     protected override void Initialize()
@@ -31,11 +43,15 @@ public class Game1 : Game
     {
         _spriteBatch = new SpriteBatch(GraphicsDevice);
 
-        texture = Content.Load<Texture2D>("car");
-        
-        objects = new List<BaseClass>();
-        Player player = new Player(texture);
-        objects.Add(player);
+        var carTexture = Content.Load<Texture2D>("car");
+
+        objects = new List<BaseClass>(){
+            new Bil(carTexture){
+                Position = new Vector2(100, 100),
+                Origin = new Vector2(carTexture.Width / 2, carTexture.Height / 2),
+        }
+        };
+
     }
 
     protected override void Update(GameTime gameTime)

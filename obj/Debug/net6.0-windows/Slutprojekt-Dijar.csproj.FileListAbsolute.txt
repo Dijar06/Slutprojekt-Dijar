@@ -76,3 +76,12 @@ C:\Users\dijar\OneDrive\Documents\GitHub\Slutprojekt-Dijar\obj\Debug\net6.0-wind
 C:\Users\dijar\OneDrive\Documents\GitHub\Slutprojekt-Dijar\obj\Debug\net6.0-windows\Slutprojekt-Dijar.pdb
 C:\Users\dijar\OneDrive\Documents\GitHub\Slutprojekt-Dijar\obj\Debug\net6.0-windows\Slutprojekt-Dijar.genruntimeconfig.cache
 C:\Users\dijar\OneDrive\Documents\GitHub\Slutprojekt-Dijar\obj\Debug\net6.0-windows\ref\Slutprojekt-Dijar.dll
+C:\Users\Admin\Documents\slutprojekt\NPM\Slutprojekt-Dijar\obj\Debug\net6.0-windows\Slutprojekt-Dijar.csproj.AssemblyReference.cache
+C:\Users\Admin\Documents\slutprojekt\NPM\Slutprojekt-Dijar\obj\Debug\net6.0-windows\Slutprojekt-Dijar.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Admin\Documents\slutprojekt\NPM\Slutprojekt-Dijar\obj\Debug\net6.0-windows\Slutprojekt-Dijar.AssemblyInfoInputs.cache
+C:\Users\Admin\Documents\slutprojekt\NPM\Slutprojekt-Dijar\obj\Debug\net6.0-windows\Slutprojekt-Dijar.AssemblyInfo.cs
+C:\Users\Admin\Documents\slutprojekt\NPM\Slutprojekt-Dijar\obj\Debug\net6.0-windows\Slutprojekt-Dijar.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Documents\slutprojekt\NPM\Slutprojekt-Dijar\obj\Debug\net6.0-windows\Slutprojekt-Dijar.sourcelink.json
+C:\Users\Admin\Documents\slutprojekt\NPM\Slutprojekt-Dijar\obj\Debug\net6.0-windows\Slutprojekt-Dijar.dll
+C:\Users\Admin\Documents\slutprojekt\NPM\Slutprojekt-Dijar\obj\Debug\net6.0-windows\refint\Slutprojekt-Dijar.dll
+C:\Users\Admin\Documents\slutprojekt\NPM\Slutprojekt-Dijar\obj\Debug\net6.0-windows\Slutprojekt-Dijar.pdb

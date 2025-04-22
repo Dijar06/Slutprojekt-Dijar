@@ -8,6 +8,8 @@ namespace Slutprojekt_Dijar
 {
     public class BaseClass
     {
+        public Vector2 Origin;
+        public Vector2 Direction;
         protected Texture2D texture;
         protected KeyboardState currentKey;
         protected KeyboardState previousKey;
@@ -17,6 +19,18 @@ namespace Slutprojekt_Dijar
         public float LifeSpan;
         public bool isRemoved = false;
         public Input input;
+        public float RotationVelocity = 3f;
+        public float LinearVelocity = 4f:
+        protected float rotation;
+
+        public floatRotation{
+            get {return rotation;}
+            set {rotation = value;}
+        }
+
+        public Matrix Transform{
+            get {return Matrix.CreateTranslation(new Vector3(-Oirigin, 0)) * Matrix.CreateRotationZ(rotation) * Matrix.CreateTranslation(new Vector3(Position, 0));}
+        }
 
         public BaseClass(Texture2D texture)
         {
@@ -33,6 +47,12 @@ namespace Slutprojekt_Dijar
             }
         }
 
+        public Sprite(Texture2D texture){
+            this.texture = texture;
+
+            Origin = new Vector2(texture.Width / 2, texture.Height / 2);
+        }
+
         public virtual void Update(GameTime gameTime, List<BaseClass> baseclassList)
         {
             
@@ -40,7 +60,9 @@ namespace Slutprojekt_Dijar
 
         public virtual void Draw(SpriteBatch spriteBatch)
         {
-            spriteBatch.Draw(texture, position, color);
+            if (texture != null){
+                spriteBatch.Draw(texture, position, null, Color.White, rotation, Origin, 1, SpriteEffects.None, 0);
+            }       
         }
     }
 }
