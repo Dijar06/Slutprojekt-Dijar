@@ -20,49 +20,40 @@ namespace Slutprojekt_Dijar
         public bool isRemoved = false;
         public Input input;
         public float RotationVelocity = 3f;
-        public float LinearVelocity = 4f:
+        public float LinearVelocity = 4f;
         protected float rotation;
 
-        public floatRotation{
-            get {return rotation;}
-            set {rotation = value;}
+        public float Rotation
+        {
+            {}
+            set => rotation = value;
         }
 
-        public Matrix Transform{
-            get {return Matrix.CreateTranslation(new Vector3(-Oirigin, 0)) * Matrix.CreateRotationZ(rotation) * Matrix.CreateTranslation(new Vector3(Position, 0));}
-        }
+        public Matrix Transform =>
+            Matrix.CreateTranslation(new Vector3(-Origin, 0)) *
+            Matrix.CreateRotationZ(rotation) *
+            Matrix.CreateTranslation(new Vector3(position, 0));
 
         public BaseClass(Texture2D texture)
         {
             this.texture = texture;
         }
 
-        public Rectangle Rectangle
-        {
-            get{
-                if (texture != null){
-                    return new Rectangle((int)position.X, (int)position.Y, texture.Width, texture.Height);
-                }
-                throw new Exception("Unknown sprite");
-            }
-        }
-
-        public Sprite(Texture2D texture){
-            this.texture = texture;
-
-            Origin = new Vector2(texture.Width / 2, texture.Height / 2);
-        }
+        public Rectangle Rectangle =>
+            texture != null
+                ? new Rectangle((int)position.X, (int)position.Y, texture.Width, texture.Height)
+                : throw new Exception("Unknown sprite");
 
         public virtual void Update(GameTime gameTime, List<BaseClass> baseclassList)
         {
-            
         }
 
         public virtual void Draw(SpriteBatch spriteBatch)
         {
-            if (texture != null){
-                spriteBatch.Draw(texture, position, null, Color.White, rotation, Origin, 1, SpriteEffects.None, 0);
-            }       
+            if (texture != null)
+            {
+                spriteBatch.Draw(texture, position, null, color, rotation, Origin, 1, SpriteEffects.None, 0);
+            }
         }
     }
 }

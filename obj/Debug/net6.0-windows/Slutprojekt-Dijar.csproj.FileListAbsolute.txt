@@ -85,3 +85,4 @@ C:\Users\Admin\Documents\slutprojekt\NPM\Slutprojekt-Dijar\obj\Debug\net6.0-wind
 C:\Users\Admin\Documents\slutprojekt\NPM\Slutprojekt-Dijar\obj\Debug\net6.0-windows\Slutprojekt-Dijar.dll
 C:\Users\Admin\Documents\slutprojekt\NPM\Slutprojekt-Dijar\obj\Debug\net6.0-windows\refint\Slutprojekt-Dijar.dll
 C:\Users\Admin\Documents\slutprojekt\NPM\Slutprojekt-Dijar\obj\Debug\net6.0-windows\Slutprojekt-Dijar.pdb
+C:\Users\dijar\OneDrive\Documents\GitHub\Slutprojekt-Dijar\bin\Debug\net6.0-windows\Content\bil1.xnb

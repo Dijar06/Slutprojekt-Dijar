@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Slutprojekt-Dijar")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c940741a11a9181be6b0117587a033a297e350f4")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d24f43813b0545506f3dcfaa3461665433824723")]
 [assembly: System.Reflection.AssemblyProductAttribute("Slutprojekt-Dijar")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Slutprojekt-Dijar")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

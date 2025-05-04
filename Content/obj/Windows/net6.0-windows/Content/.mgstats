@@ -1,2 +1,3 @@
 Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
-"C:/Users/Admin/Documents/slutprojekt/NPM/Slutprojekt-Dijar/Content/car.png","C:/Users/Admin/Documents/slutprojekt/NPM/Slutprojekt-Dijar/Content/bin/Windows/Content/car.xnb","TextureProcessor","Texture2DContent",4619,160085,0,2636996
+"C:/Users/dijar/OneDrive/Documents/GitHub/Slutprojekt-Dijar/Content/bil1.jpg","C:/Users/dijar/OneDrive/Documents/GitHub/Slutprojekt-Dijar/Content/bin/Windows/Content/bil1.xnb","TextureProcessor","Texture2DContent",6041,202585,0.1032091
+"C:/Users/dijar/OneDrive/Documents/GitHub/Slutprojekt-Dijar/Content/car.png","C:/Users/dijar/OneDrive/Documents/GitHub/Slutprojekt-Dijar/Content/bin/Windows/Content/car.xnb","TextureProcessor","Texture2DContent",4619,160085,0.0067876

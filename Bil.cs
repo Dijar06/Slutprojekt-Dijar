@@ -1,64 +1,62 @@
+using System;
+using System.Collections.Generic;
+using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
+using Microsoft.Xna.Framework.Input;
+
 namespace Slutprojekt_Dijar
 {
-    public class Bil : Baseclass, ICollidable
+    public class Bil : BaseClass
     {
-        public int Health {get; set;}
-        public float speed {get; set;}
+        public int Health { get; set; } = 1;
         public int Score;
 
-        public bool isDead{
-            get{
-                return Health <= 0;
-            }
-        }
-        
-        public Bil(Texture2D texture) : base(texture){
+        public bool isDead => Health <= 0;
+
+        public Bil(Texture2D texture) : base(texture)
+        {
             speed = 5f;
         }
 
-        public override void Update(GameTime gameTime, List<Baseclass> baseclass){
-            if (isDead){
+        public override void Update(GameTime gameTime, List<BaseClass> objects)
+        {
+            if (isDead)
                 return;
-            }
 
             Move();
-            foreach (var obj in objects){
-                if (obj is Car){
+
+            // Kollisionshantering exempel
+            foreach (var obj in objects)
+            {
+                if (obj == this)
                     continue;
-                }
-                if (obj.Rectangle.Intersects(this.Rectangle)){
-                    speed++;
-                    sprite.IsRemoved = true;
+
+                if (obj.Rectangle.Intersects(this.Rectangle))
+                {
+                    speed += 1;
+                    obj.isRemoved = true;
                 }
             }
         }
 
-        private void Move(){
+        private void Move()
+        {
             previousKey = currentKey;
             currentKey = Keyboard.GetState();
 
-            if(Keyboard.GetState().IsKeyDown(Keys.A)){
-                rotation -= Mathhelper.ToRadians(RotationVelocity);
-            }
-            else if(Keyboard.GetState().IsKeyDown(Keys.D)){
-                rotation += Mathhelper.ToRadians(RotationVelocity);
-            }
+            if (currentKey.IsKeyDown(Keys.A))
+                rotation -= MathHelper.ToRadians(RotationVelocity);
+            if (currentKey.IsKeyDown(Keys.D))
+                rotation += MathHelper.ToRadians(RotationVelocity);
 
             Direction = new Vector2((float)Math.Cos(rotation), (float)Math.Sin(rotation));
 
-            if (Keyboard.GetState().IsKeyDown(Keys.W)){
-                Position += Direction * LinearVelocity;
-            }
+            if (currentKey.IsKeyDown(Keys.W))
+                position += Direction * LinearVelocity;
+            if (currentKey.IsKeyDown(Keys.S))
+                position -= Direction * LinearVelocity;
 
-            if (Keyboard.GetState().IsKeyDown(Keys.S)){
-                Position -= Direction * LinearVelocity;
-            }
-
-            Position = Vector2.Clamp(Position, new Vector2(0,0), new Vector2(Game1.ScreenWidth - this.Rectangle.Width, Game1.ScreenHeight - this.Rectangle.Height));
-        }
-
-        public virtual void OnCollide(Sprite sprite){
-            throw new NotImplementedException();
+            position = Vector2.Clamp(position, new Vector2(0, 0), new Vector2(Game1.ScreenWidth - Rectangle.Width, Game1.ScreenHeight - Rectangle.Height));
         }
     }
 }

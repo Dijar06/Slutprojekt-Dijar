@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SourceFileCollection xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<SourceFileCollection xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Profile>Reach</Profile>
   <Platform>Windows</Platform>
   <Config />
   <SourceFiles>
-    <File>C:/Users/Admin/Documents/GitHub/d8/Slutprojekt-Dijar/Content/car.png</File>
-    <File>C:/Users/Admin/Documents/GitHub/d8/Slutprojekt-Dijar/Content/bil.png</File>
+    <File>C:/Users/dijar/OneDrive/Documents/GitHub/Slutprojekt-Dijar/Content/bil1.jpg</File>
+    <File>C:/Users/dijar/OneDrive/Documents/GitHub/Slutprojekt-Dijar/Content/car.png</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
   </DestFiles>
 </SourceFileCollection>
